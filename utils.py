@@ -20,7 +20,7 @@ class EEGBCI_Dataset(torch.utils.data.Dataset):
         self.transform = transform
 
     def __getitem__(self, item):
-        data = self.data[item].reshape(10, 80)
+        data = self.data[item].reshape(4, 800)
         label = torch.from_numpy(self.label[item])
         if self.transform:
             data = self.transform(data)
@@ -36,7 +36,7 @@ class EEGBCI_CNN(nn.Module):
     def __init__(self, dropout_rate):
         super(EEGBCI_CNN, self).__init__()
 
-        # input 1 x 10 x 80
+        # input 1 x 4 x 800
         self.conv1 = nn.Sequential(
             nn.Conv2d(
                 in_channels=1,
@@ -62,7 +62,7 @@ class EEGBCI_CNN(nn.Module):
             nn.MaxPool2d(2),
         )
 
-        # 64 * 5 * 40
+        # 64 * 2 * 400
         self.conv4 = nn.Sequential(
             nn.Conv2d(64, 64, 3, 1, 1),
             nn.BatchNorm2d(64),
@@ -83,8 +83,9 @@ class EEGBCI_CNN(nn.Module):
             nn.MaxPool2d(2),
         )
 
+        # 128 * 1 * 200
         self.fc1 = nn.Sequential(
-            nn.Linear(128 * 2 * 20, 512),
+            nn.Linear(128 * 200, 512),
             nn.BatchNorm1d(512),
             nn.LeakyReLU(),
             nn.Dropout(dropout_rate),
@@ -108,7 +109,7 @@ class EEGBCI_CNN(nn.Module):
         x = self.conv4(x)
         x = self.conv5(x)
         x = self.conv6(x)
-        x = x.view(-1, 128 * 2 * 20)
+        x = x.view(-1, 128 * 200)
         x = self.fc1(x)
         x = self.fc2(x)
         x = self.fc3(x)
