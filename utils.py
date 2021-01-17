@@ -116,6 +116,96 @@ class EEGBCI_CNN(nn.Module):
         return x
 
 
+class EEGBCI_CNN_1(nn.Module):
+    def __init__(self, dropout_rate):
+        super(EEGBCI_CNN_1, self).__init__()
+
+        # input 1 x 4 x 800
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(
+                in_channels=1,
+                out_channels=32,
+                kernel_size=3,
+                stride=1,
+                padding=1,
+            ),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 64, 3, 1, 1),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+            nn.MaxPool2d(2),
+        )
+
+        # 64 * 2 * 400
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(64, 64, 3, 1, 1),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+            nn.MaxPool2d(2),
+        )
+
+        # 64 * 1 * 200
+        self.fc1 = nn.Sequential(
+            nn.Linear(64 * 200, 64),
+            nn.BatchNorm1d(64),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.fc2 = nn.Sequential(
+            nn.Linear(64, 2),
+            nn.Softmax(dim=1)
+        )
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.conv2(x)
+        x = self.conv3(x)
+        x = x.view(-1, 64 * 200)
+        x = self.fc1(x)
+        x = self.fc2(x)
+        return x
+
+
+class EEGBCI_RNN(nn.Module):
+    def __init__(self, dropout_rate):
+        super(EEGBCI_RNN, self).__init__()
+
+        # input 1 x 4 x 800
+        self.rnn = nn.GRU(
+            input_size=4,
+            hidden_size=128,
+            num_layers=3,
+            batch_first=True,
+            dropout=dropout_rate,
+        )
+
+        # 128 * 1 * 200
+        self.fc1 = nn.Sequential(
+            nn.Linear(128, 64),
+            nn.BatchNorm1d(64),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.fc2 = nn.Sequential(
+            nn.Linear(64, 2),
+            nn.Softmax(dim=1)
+        )
+
+    def forward(self, x):
+        x = x.view(-1, 4, 800)
+        x = torch.transpose(x, 1, 2)
+        out, h_n = self.rnn(x, None)
+        out = self.fc1(out[:, -1, :])
+        out = self.fc2(out)
+        return out
+
+
 def preprocess(data, method):
     num_channel = data.shape[1]
     len_data = data.shape[2]

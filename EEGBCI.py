@@ -9,7 +9,6 @@ import numpy as np
 import utils
 
 tmin, tmax = -1., 4.
-csp_components = 4
 # train_interval = [(1.0, 1.5), (1.5, 2.0)]
 num_channel = 4
 len_data = 160 * 5
@@ -45,24 +44,25 @@ for subject_id in range(1, num_subjects + 1):
 
     raw.filter(7., 30.)
 
-    # raw.plot()
-
     events, _ = mne.events_from_annotations(raw, event_id={'T1': 2, 'T2': 3})
     event_id = {'left': 2, 'right': 3}
 
-    epochs = mne.Epochs(raw, events, event_id, tmin, tmax, proj=True, picks=mne.pick_types(raw.info, eeg=True),
+    epochs = mne.Epochs(raw, events, event_id, tmin, tmax - 1. / 160, proj=True, picks=mne.pick_types(raw.info, eeg=True),
                         baseline=None, preload=True)
-    epochs_data = epochs.get_data()
 
-    # epochs_train = epochs.copy().crop(tmin=train_tmin, tmax=train_tmax - 1. / 160)
+    # ica = mne.preprocessing.ICA(n_components=0.95, method='fastica').fit(epochs)
+
+    # ecg_epochs = mne.preprocessing.create_eog_epochs
+
+    epochs_data = epochs.get_data()
     labels = epochs.events[:, -1] - 2
 
-    # epochs_data_train = epochs_train.get_data()
+    csp = mne.decoding.CSP(n_components=4, log=True)
+    lda = sklearn.discriminant_analysis.LinearDiscriminantAnalysis()
 
     cross_validation = sklearn.model_selection.ShuffleSplit(1, test_size=0.1)
     # index_generator = cross_validation.split(epochs_data_train)
     index_generator = cross_validation.split(epochs_data)
-
 
     for train_index, test_index in index_generator:
         data_train = epochs_data[train_index]
@@ -70,9 +70,16 @@ for subject_id in range(1, num_subjects + 1):
         label_train = labels[train_index]
         label_test = labels[test_index]
 
+        # data_train = csp.fit_transform(data_train, label_train)
+        # data_test = csp.transform(data_test)
+        #
+        # lda.fit(data_train, label_train)
+        # print(lda.score(data_test, label_test))
+        # continue
+
         # Normalization / Standardization
-        data_train = utils.preprocess(data_train, 'None')
-        data_test = utils.preprocess(data_test, 'None')
+        data_train = utils.preprocess(data_train, 'Normalization')
+        data_test = utils.preprocess(data_test, 'Normalization')
 
         for i in range(len(data_train)):
             for j in range(num_channel * len_data):
