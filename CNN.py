@@ -4,41 +4,40 @@ import torch
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import torchvision.transforms as transforms
-import matplotlib.pyplot as plt
 import numpy as np
 
 import utils
 
 
 EPOCH = 100
-BATCH_SIZE = 16
-INPUT_CHANNEL = 4
-INPUT_LEN = 800
+BATCH_SIZE = 64
 N_CLASS = 2
-LR = 0.0001
-DROPOUT_RATE = 0.0
+LR = 0.001
+DROPOUT_RATE = 0.3
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-NEURAL_NETWORK_TYPE = 'CNN'
+NEURAL_NETWORK_TYPE = 'RNN&CNN'
 
 
-if os.path.exists('runs/ECG_LR=%.4f' % LR):
-    shutil.rmtree('runs/ECG_LR=%.4f' % LR)
-writer = SummaryWriter('runs/ECG_LR=%.4f' % LR)
+if os.path.exists('runs/' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR):
+    shutil.rmtree('runs/' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
+writer = SummaryWriter('runs/' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
 
 print('Loading data ...')
-dataset_train = utils.EEGBCI_Dataset(root='./datasets', train=True, transform=transforms.ToTensor())
-dataset_test = utils.EEGBCI_Dataset(root='./datasets', train=False, transform=transforms.ToTensor())
+dataset_train = utils.EEGBCI_Dataset(root='./datasets', train=True, transform=None)
+dataset_test = utils.EEGBCI_Dataset(root='./datasets', train=False, transform=None)
 # print(train_dataset.num)
 # print(test_dataset.num)
-dataloader_train = DataLoader(dataset=dataset_train, batch_size=BATCH_SIZE, shuffle=True)
-dataloader_test = DataLoader(dataset=dataset_test, batch_size=BATCH_SIZE)
+dataloader_train = DataLoader(dataset=dataset_train, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
+dataloader_test = DataLoader(dataset=dataset_test, batch_size=BATCH_SIZE, drop_last=True)
 
 print('Constructing Neural Network ...')
 neural_network = None
 if NEURAL_NETWORK_TYPE == 'CNN':
     neural_network = utils.EEGBCI_CNN(DROPOUT_RATE).to(device)
-else:
+elif NEURAL_NETWORK_TYPE == 'RNN':
     neural_network = utils.EEGBCI_RNN(DROPOUT_RATE).to(device)
+else:
+    neural_network = utils.EEGBCI_CNN_RNN(DROPOUT_RATE).to(device)
 optimizer = torch.optim.Adam(neural_network.parameters(), lr=LR)
 loss_func = torch.nn.MSELoss()
 
@@ -48,17 +47,6 @@ for epoch in range(EPOCH):
     avg_train_loss = 0.
     avg_train_accuracy = 0.0
     for step, (data, label) in enumerate(dataloader_train):
-        # data = data.numpy().reshape(-1, 10, 80)
-        # x = np.linspace(0, 79, 80)
-        # for i in range(5):
-        #     plt.clf()
-        #     for j in range(5):
-        #         plt.plot(x, data[i][j], label='%d' % j)
-        #     plt.title(label.numpy()[i])
-        #     plt.legend()
-        #     plt.show()
-        # exit()
-
         data, label = data.to(device), label.to(device)
         out = neural_network(data)
         loss = loss_func(out, label)
@@ -99,5 +87,4 @@ for epoch in range(EPOCH):
     print('Epoch: ', epoch, '| train loss: %.4f' % avg_train_loss, '| train accuracy: %.2f' % avg_train_accuracy,
           '| test loss: %.4f' % avg_test_loss, '| test accuracy: %.2f' % avg_test_accuracy)
     writer.add_scalar('loss', avg_train_loss, epoch)
-    writer.add_scalar('train_accuracy', avg_train_accuracy, epoch)
-    writer.add_scalar('test_accuracy', avg_test_accuracy, epoch)
+    writer.add_scalar('accuracy', avg_test_accuracy, epoch)

@@ -36,11 +36,12 @@ for subject_id in range(1, num_subjects + 1):
         print('%d !!! sfreq not equals to 160' % subject_id)
         continue
 
+    continue
+
     montage = mne.channels.make_standard_montage('standard_1005')
     raw.set_montage(montage)
 
     raw = raw.pick_channels(ch_names)
-    print(raw)
 
     raw.filter(7., 30.)
 
