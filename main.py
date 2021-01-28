@@ -125,47 +125,47 @@ for electrode in ELECTRODES:
     labels_electrode = labels_electrode.reshape(-1, 2)
     data_all.append(data_electrode)
     labels_all.append(labels_electrode)
-
-for i in range(1, len(data_all)):
-    data_all[0] = np.vstack((data_all[0], data_all[i]))
-    labels_all[0] = np.vstack((labels_all[0], labels_all[i]))
-
-data = data_all[0]
-labels = labels_all[0]
-
-for i in range(640):
-    mean_data = np.mean(data[:, i])
-    std_data = np.std(data[:, i])
-    data[:, i] = (data[:, i] - mean_data) / std_data
-
-data_labels = np.hstack((data, labels))
-np.random.shuffle(data_labels)
-
-train_dict = {i: [] for i in range(640)}
-train_dict['left'] = []
-train_dict['right'] = []
-test_dict = {i: [] for i in range(640)}
-test_dict['left'] = []
-test_dict['right'] = []
-
-num_data = len(data_labels)
-num_train = int(0.9 * num_data)
-
-for i in range(num_train):
-    for j in range(640):
-        train_dict[j].append(data_labels[i, j])
-    train_dict['left'].append(data_labels[i, -2])
-    train_dict['right'].append(data_labels[i, -1])
-
-for i in range(num_train, num_data):
-    for j in range(640):
-        test_dict[j].append(data_labels[i, j])
-    test_dict['left'].append(data_labels[i, -2])
-    test_dict['right'].append(data_labels[i, -1])
-
-print('Start saving data to csv file ...')
-dataframe_train = pd.DataFrame(train_dict)
-dataframe_train.to_csv('./datasets/train_data.csv', index=False)
-
-dataframe_test = pd.DataFrame(test_dict)
-dataframe_test.to_csv('./datasets/test_data.csv', index=False)
+#
+# for i in range(1, len(data_all)):
+#     data_all[0] = np.vstack((data_all[0], data_all[i]))
+#     labels_all[0] = np.vstack((labels_all[0], labels_all[i]))
+#
+# data = data_all[0]
+# labels = labels_all[0]
+#
+# for i in range(640):
+#     mean_data = np.mean(data[:, i])
+#     std_data = np.std(data[:, i])
+#     data[:, i] = (data[:, i] - mean_data) / std_data
+#
+# data_labels = np.hstack((data, labels))
+# np.random.shuffle(data_labels)
+#
+# train_dict = {i: [] for i in range(640)}
+# train_dict['left'] = []
+# train_dict['right'] = []
+# test_dict = {i: [] for i in range(640)}
+# test_dict['left'] = []
+# test_dict['right'] = []
+#
+# num_data = len(data_labels)
+# num_train = int(0.9 * num_data)
+#
+# for i in range(num_train):
+#     for j in range(640):
+#         train_dict[j].append(data_labels[i, j])
+#     train_dict['left'].append(data_labels[i, -2])
+#     train_dict['right'].append(data_labels[i, -1])
+#
+# for i in range(num_train, num_data):
+#     for j in range(640):
+#         test_dict[j].append(data_labels[i, j])
+#     test_dict['left'].append(data_labels[i, -2])
+#     test_dict['right'].append(data_labels[i, -1])
+#
+# print('Start saving data to csv file ...')
+# dataframe_train = pd.DataFrame(train_dict)
+# dataframe_train.to_csv('./datasets/train_data.csv', index=False)
+#
+# dataframe_test = pd.DataFrame(test_dict)
+# dataframe_test.to_csv('./datasets/test_data.csv', index=False)
