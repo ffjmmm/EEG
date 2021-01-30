@@ -33,6 +33,35 @@ class EEGBCI_Dataset(torch.utils.data.Dataset):
         return self.num
 
 
+class EEG_Dataset(torch.utils.data.Dataset):
+    def __init__(self, root, train, transform=None):
+        super(EEG_Dataset, self).__init__()
+
+        if train:
+            self.data = pd.read_csv(os.path.join(root, 'train_data_new.csv'), engine='python')
+        else:
+            self.data = pd.read_csv(os.path.join(root, 'test_data_new.csv'), engine='python')
+        self.num = len(self.data)
+        self.data = np.asarray(self.data, dtype=np.float)
+        self.label = self.data[:, -2:]
+        self.data = self.data[:, :-2]
+        self.transform = transform
+        print(self.data.shape)
+
+    def __getitem__(self, item):
+        data = self.data[item].reshape(32, 32)
+        data = torch.from_numpy(data)
+        label = torch.from_numpy(self.label[item])
+        if self.transform:
+            data = self.transform(data)
+        data = data.type(torch.FloatTensor)
+        label = label.type(torch.FloatTensor)
+        return data, label
+
+    def __len__(self):
+        return self.num
+
+
 class EEGBCI_CNN(nn.Module):
     def __init__(self, dropout_rate):
         super(EEGBCI_CNN, self).__init__()
@@ -112,6 +141,91 @@ class EEGBCI_CNN(nn.Module):
         x = self.conv5(x)
         x = self.conv6(x)
         x = x.view(-1, 128 * 40)
+        x = self.fc1(x)
+        x = self.fc2(x)
+        x = self.fc3(x)
+        return x
+
+
+class EEG_CNN(nn.Module):
+    def __init__(self, dropout_rate):
+        super(EEG_CNN, self).__init__()
+
+        # input 1 x 32 x 32
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(
+                in_channels=1,
+                out_channels=32,
+                kernel_size=3,
+                stride=1,
+                padding=1,
+            ),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(32, 32, 3, 1, 1),
+            nn.BatchNorm2d(32),
+            nn.LeakyReLU(),
+        )
+
+        self.conv3 = nn.Sequential(
+            nn.Conv2d(32, 64, 3, 1, 1),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+            nn.MaxPool2d(2),
+        )
+
+        # 64 * 16 * 16
+        self.conv4 = nn.Sequential(
+            nn.Conv2d(64, 64, 3, 1, 1),
+            nn.BatchNorm2d(64),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.conv5 = nn.Sequential(
+            nn.Conv2d(64, 64, 3, 1, 1),
+            nn.BatchNorm2d(64),
+            nn.LeakyReLU(),
+        )
+
+        self.conv6 = nn.Sequential(
+            nn.Conv2d(64, 128, 3, 1, 1),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+            nn.MaxPool2d(2),
+        )
+
+        # 128 * 8 * 8
+        self.fc1 = nn.Sequential(
+            nn.Linear(128 * 64, 512),
+            nn.BatchNorm1d(512),
+            nn.LeakyReLU(),
+            nn.Dropout(dropout_rate),
+        )
+
+        self.fc2 = nn.Sequential(
+            nn.Linear(512, 64),
+            nn.BatchNorm1d(64),
+            nn.LeakyReLU(),
+        )
+
+        self.fc3 = nn.Sequential(
+            nn.Linear(64, 2),
+            nn.Softmax(dim=1)
+        )
+
+    def forward(self, x):
+        x = x.view(-1, 1, 32, 32)
+        x = self.conv1(x)
+        x = self.conv2(x)
+        x = self.conv3(x)
+        x = self.conv4(x)
+        x = self.conv5(x)
+        x = self.conv6(x)
+        x = x.view(-1, 128 * 64)
         x = self.fc1(x)
         x = self.fc2(x)
         x = self.fc3(x)

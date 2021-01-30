@@ -4,12 +4,24 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 srate = 1024
-interval = 10
-n_pnts = 1000
+interval = 5
+n_pnts = 1024
 n_channels = 64
+channels = ['C5', 'C3', 'C1', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CP2', 'CP4', 'CP6',
+            'P7', 'P5', 'P3', 'P1', 'P2', 'P4', 'P6', 'P8', 'F7', 'F5', 'F3', 'F1', 'F2',
+            'F4', 'F6', 'F8']
+channels_1 = [8, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21, 47, 48, 49, 50, 52, 53, 54, 55]
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh']
 subjects_num = 11
-
+ELECTRODES = {
+    'Fp1': 1, 'Fpz': 2, 'Fp2': 3, 'F7': 4, 'F3': 5, 'Fz': 6, 'F4': 7, 'F8': 8, 'FC5': 9, 'FC1': 10,
+    'FC2': 11, 'FC6': 12, 'M1': 13, 'T7': 14, 'C3': 15, 'Cz': 16, 'C4': 17, 'T8': 18, 'M2': 19, 'CP5': 20,
+    'CP1': 21, 'CP2': 22, 'CP6': 23, 'P7': 24, 'P3': 25, 'Pz': 26, 'P4': 27, 'P8': 28, 'POz': 29, 'O1': 30,
+    'O2': 31, 'EOG': 32, 'AF7': 33, 'AF3': 34, 'AF4': 35, 'AF8': 36, 'F5': 37, 'F1': 38, 'F2': 39, 'F6': 40,
+    'FC3': 41, 'FCz': 42, 'FC4': 43, 'C5': 44, 'C1': 45, 'C2': 46, 'C6': 47, 'CP3': 48, 'CP4': 49, 'P5': 50,
+    'P1': 51, 'P2': 52, 'P6': 53, 'PO5': 54, 'PO3': 55, 'PO4': 56, 'PO6': 57, 'FT7': 58, 'FT8': 59, 'TP7': 60,
+    'TP8': 61, 'PO7': 62, 'PO8': 63, 'Oz': 64,
+}
 
 
 def load_file(name, index):
@@ -24,7 +36,10 @@ def load_file(name, index):
         event_time, event_label = events[i][0][0, 0], int(events[i][1][0].split(',')[0])
         if event_label in [1004, 1005]:
             time.append(event_time)
-            label.append(event_label - 1004)
+            if event_label == 1004:
+                label.append([1, 0])
+            else:
+                label.append([0, 1])
     return time, label, raw_data
 
 
@@ -41,7 +56,8 @@ def load_data(subject_index, index, channels):
             continue
         sample_point = np.arange(time, time + n_pnts * interval, interval)
         for channel in channels:
-            data_ = raw_data[channel][sample_point]
+            data_ = raw_data[ELECTRODES[channel] - 1][sample_point]
+            # data_ = raw_data[channel - 1][sample_point]
             data.append(data_)
             labels.append(event_label[i])
 
@@ -52,11 +68,22 @@ data_all = []
 labels_all = []
 
 for subject_index in range(subjects_num):
+# for subject_index in range(1):
+    data_ = []
+    labels_ = []
     for k in range(3):
-        data, labels = load_data(subject_index, k, np.arange(n_channels))
-        data_all += data
-        labels_all += labels
+        data, labels = load_data(subject_index, k, channels)
+        data_ += data
+        labels_ += labels
         print(subject_index, k, len(data))
+    for i in range(1, len(data_)):
+        data_[0] = np.vstack((data_[0], data_[i]))
+        labels_[0] = np.vstack((labels_[0], labels_[i]))
+    print(data_[0].shape)
+    print(labels_[0].shape)
+    data_all.append(data_[0])
+    labels_all.append(labels_[0])
+
 
 total = len(data_all)
 for i in range(1, len(data_all)):
@@ -68,6 +95,7 @@ data = data_all[0]
 labels = labels_all[0]
 
 print(data.shape)
+print(labels.shape)
 
 for i in range(data.shape[1]):
     mean_data = np.mean(data[:, i])
@@ -106,11 +134,3 @@ dataframe_train.to_csv('./datasets/train_data_new.csv', index=False)
 dataframe_test = pd.DataFrame(test_dict)
 dataframe_test.to_csv('./datasets/test_data_new.csv', index=False)
 
-exit()
-n = 1000000
-m = 20
-x = np.arange(0, n, interval)
-
-for i in range(m):
-    plt.plot(x, data[i][0: n: interval])
-plt.show()
