@@ -9,16 +9,18 @@ import numpy as np
 import utils
 
 
+# 超参数设置
 EPOCH = 100
 BATCH_SIZE = 128
 N_CLASS = 2
-LR = 0.00001
+LR = 0.0001
 DROPOUT_RATE = 0.1
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 NEURAL_NETWORK_TYPE = 'CNN'
 SUMMARY = False
 
 
+# 保存运行结果到tensorboard
 writer = None
 if SUMMARY:
     if os.path.exists('runs/EEG_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR):
@@ -51,6 +53,7 @@ loss_func = torch.nn.MSELoss()
 
 print('Start Training ...')
 for epoch in range(EPOCH):
+    # 训练过程
     neural_network = neural_network.train()
     avg_train_loss = 0.
     avg_train_accuracy = 0.0
@@ -69,10 +72,11 @@ for epoch in range(EPOCH):
         label = torch.max(label, 1)[1].data.numpy()
         accuracy = float((pred == label).astype(int).sum()) / float(len(label))
         avg_train_accuracy += accuracy
-
+    # 计算训练平均loss与accuracy
     avg_train_loss /= (step + 1)
     avg_train_accuracy /= (step + 1)
 
+    # 测试过程
     neural_network = neural_network.eval()
     avg_test_loss = 0.0
     avg_test_accuracy = 0.0
@@ -89,6 +93,7 @@ for epoch in range(EPOCH):
         accuracy = float((pred == label).astype(int).sum()) / float(len(label))
         avg_test_accuracy += accuracy
 
+    # 计算测试平均loss与accuracy
     avg_test_accuracy /= (step + 1)
     avg_test_loss /= (step + 1)
 
