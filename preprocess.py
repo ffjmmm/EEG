@@ -1,29 +1,36 @@
 import scipy.io as sio
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+import mne
+import random
+
+mne.set_log_file('./mne_output', overwrite=True)
 
 srate = 1024
+factor = 1. / 1000000.
 interval = 5
+start_time = 1
 n_pnts = 1024
-n_channels = 64
+n_channels = 28
+data_standardization = False
+raw_plot = False
+l_freq, h_freq = 5., 30.
 channels = ['C5', 'C3', 'C1', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CP2', 'CP4', 'CP6',
             'P7', 'P5', 'P3', 'P1', 'P2', 'P4', 'P6', 'P8', 'F7', 'F5', 'F3', 'F1', 'F2',
             'F4', 'F6', 'F8']
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh']
 subjects_num = 11
-ELECTRODES = {
-    'Fp1': 1, 'Fpz': 2, 'Fp2': 3, 'F7': 4, 'F3': 5, 'Fz': 6, 'F4': 7, 'F8': 8, 'FC5': 9, 'FC1': 10,
-    'FC2': 11, 'FC6': 12, 'M1': 13, 'T7': 14, 'C3': 15, 'Cz': 16, 'C4': 17, 'T8': 18, 'M2': 19, 'CP5': 20,
-    'CP1': 21, 'CP2': 22, 'CP6': 23, 'P7': 24, 'P3': 25, 'Pz': 26, 'P4': 27, 'P8': 28, 'POz': 29, 'O1': 30,
-    'O2': 31, 'EOG': 32, 'AF7': 33, 'AF3': 34, 'AF4': 35, 'AF8': 36, 'F5': 37, 'F1': 38, 'F2': 39, 'F6': 40,
-    'FC3': 41, 'FCz': 42, 'FC4': 43, 'C5': 44, 'C1': 45, 'C2': 46, 'C6': 47, 'CP3': 48, 'CP4': 49, 'P5': 50,
-    'P1': 51, 'P2': 52, 'P6': 53, 'PO5': 54, 'PO3': 55, 'PO4': 56, 'PO6': 57, 'FT7': 58, 'FT8': 59, 'TP7': 60,
-    'TP8': 61, 'PO7': 62, 'PO8': 63, 'Oz': 64,
-}
+subject = [i for i in range(subjects_num)]
+ch_names = ['Fp1', 'Fpz', 'Fp2', 'F7', 'F3',  'Fz',  'F4',  'F8',  'FC5', 'FC1', 'FC2', 'FC6',
+            'M1',  'T7',  'C3',  'Cz', 'C4',  'T8',  'M2',  'CP5', 'CP1', 'CP2', 'CP6', 'P7',
+            'P3',  'Pz',  'P4',  'P8', 'POz', 'O1',  'O2',  'EOG', 'AF7', 'AF3', 'AF4', 'AF8',
+            'F5',  'F1',  'F2',  'F6', 'FC3', 'FCz', 'FC4', 'C5',  'C1',  'C2',  'C6',  'CP3',
+            'CP4', 'P5',  'P1',  'P2', 'P6',  'PO5', 'PO3', 'PO4', 'PO6', 'FT7', 'FT8', 'TP7',
+            'TP8', 'PO7', 'PO8', 'Oz']
+ch_types = ['eeg'] * 31 + ['eog'] + ['eeg'] * 32
 
 
-# 读取文件，获取其raw数据与events
+# open 'name''index'.mat
 def load_file(name, index):
     index += 1
     folder_path = './datasets/data/%s/' % name
@@ -36,6 +43,7 @@ def load_file(name, index):
         event_time, event_label = events[i][0][0, 0], int(events[i][1][0].split(',')[0])
         if event_label in [1004, 1005]:
             time.append(event_time)
+            # label.append(event_label - 1004)
             if event_label == 1004:
                 label.append([1, 0])
             else:
@@ -43,97 +51,80 @@ def load_file(name, index):
     return time, label, raw_data
 
 
-# 读取subject index给定channels的所有数据
+# load data from given subject and channels
 def load_data(subject_index, index, channels):
     event_time, event_label, raw_data = load_file(subjects[subject_index], index)
+    raw_data = raw_data * factor
     event_num = len(event_label)
+    print(subject_index, index, event_num)
 
-    data = []
-    labels = []
+    info = mne.create_info(ch_names, ch_types=ch_types, sfreq=1024)
+    info['description'] = 'My dataset'
+    raw = mne.io.RawArray(raw_data, info)
+    raw = raw.pick_channels(channels)
+    raw.filter(l_freq, h_freq, fir_design='firwin', skip_by_annotation='edge')
+    if raw_plot:
+        raw.plot()
+    raw_data = raw.get_data()
 
+    data_label = []
     for i in range(event_num):
-        time = event_time[i] - srate
+        time = event_time[i] + srate * start_time
         if time + n_pnts * interval >= raw_data.shape[1]:
             continue
         sample_point = np.arange(time, time + n_pnts * interval, interval)
-        for channel in channels:
-            data_ = raw_data[ELECTRODES[channel] - 1][sample_point]
-            # data_ = raw_data[channel - 1][sample_point]
-            data.append(data_)
-            labels.append(event_label[i])
 
-    return data, labels
+        data_label += [np.hstack((raw_data[j][sample_point], event_label[i])) for j in range(n_channels)]
+
+    return data_label
 
 
-data_all = []
-labels_all = []
+data_label_all = []
 
-# 读取所有数据
-for subject_index in range(subjects_num):
-    data_ = []
-    labels_ = []
+for subject_index in subject:
     for k in range(3):
-        data, labels = load_data(subject_index, k, channels)
-        data_ += data
-        labels_ += labels
-        print(subject_index, k, len(data))
-    for i in range(1, len(data_)):
-        data_[0] = np.vstack((data_[0], data_[i]))
-        labels_[0] = np.vstack((labels_[0], labels_[i]))
-    data_all.append(data_[0])
-    labels_all.append(labels_[0])
+        data_label_all += load_data(subject_index, k, channels)
 
+random.seed(27)
+random.shuffle(data_label_all)
+data_label_all = np.stack([data_label for data_label in data_label_all], 0)
+print(data_label_all.shape)
 
-# 将所有数据堆叠在一起
-total = len(data_all)
-for i in range(1, len(data_all)):
-    data_all[0] = np.vstack((data_all[0], data_all[i]))
-    labels_all[0] = np.vstack((labels_all[0], labels_all[i]))
-    print(i, total)
+n_data = len(data_label_all)
+n_train = int(0.9 * n_data)
 
-data = data_all[0]
-labels = labels_all[0]
-
-print(data.shape)
-print(labels.shape)
-
-# 进行数据标准化
-for i in range(data.shape[1]):
-    mean_data = np.mean(data[:, i])
-    std_data = np.std(data[:, i])
-    data[:, i] = (data[:, i] - mean_data) / std_data
-
-# 打乱数据
-data_labels = np.hstack((data, labels))
-np.random.shuffle(data_labels)
+# standardization
+if data_standardization:
+    for i in range(n_pnts):
+        mean_data = np.mean(data_label_all[:, i])
+        std_data = np.std(data_label_all[:, i])
+        data_label_all[:, i] = (data_label_all[:, i] - mean_data) / std_data
 
 # 保存数据到csv文件
-train_dict = {i: [] for i in range(data.shape[1])}
+train_dict = {i: [] for i in range(n_pnts)}
 train_dict['left'] = []
 train_dict['right'] = []
-test_dict = {i: [] for i in range(data.shape[1])}
+test_dict = {i: [] for i in range(n_pnts)}
 test_dict['left'] = []
 test_dict['right'] = []
 
-num_data = len(data_labels)
-num_train = int(0.9 * num_data)
+for i in range(n_train):
+    for j in range(n_pnts):
+        train_dict[j].append(data_label_all[i, j])
+    train_dict['left'].append(data_label_all[i, -2])
+    train_dict['right'].append(data_label_all[i, -1])
 
-for i in range(num_train):
-    for j in range(data.shape[1]):
-        train_dict[j].append(data_labels[i, j])
-    train_dict['left'].append(data_labels[i, -2])
-    train_dict['right'].append(data_labels[i, -1])
-
-for i in range(num_train, num_data):
-    for j in range(data.shape[1]):
-        test_dict[j].append(data_labels[i, j])
-    test_dict['left'].append(data_labels[i, -2])
-    test_dict['right'].append(data_labels[i, -1])
+for i in range(n_train, n_data):
+    for j in range(n_pnts):
+        test_dict[j].append(data_label_all[i, j])
+    test_dict['left'].append(data_label_all[i, -2])
+    test_dict['right'].append(data_label_all[i, -1])
 
 print('Start saving data to csv file ...')
 dataframe_train = pd.DataFrame(train_dict)
-dataframe_train.to_csv('./datasets/train_data_new.csv', index=False)
+filename = '%s.csv' % subjects[subject[0]] if len(subject) == 1 else 'all.csv'
+dataframe_train.to_csv('./datasets/train_data_' + filename, index=False)
 
 dataframe_test = pd.DataFrame(test_dict)
-dataframe_test.to_csv('./datasets/test_data_new.csv', index=False)
+dataframe_test.to_csv('./datasets/test_data_' + filename, index=False)
 

@@ -34,19 +34,20 @@ class EEGBCI_Dataset(torch.utils.data.Dataset):
 
 
 class EEG_Dataset(torch.utils.data.Dataset):
-    def __init__(self, root, train, transform=None):
+    def __init__(self, root, train, subject, transform=None):
         super(EEG_Dataset, self).__init__()
 
         if train:
-            self.data = pd.read_csv(os.path.join(root, 'train_data_new.csv'), engine='python')
+            self.data = pd.read_csv(os.path.join(root, 'train_data_%s.csv' % subject), engine='python')
         else:
-            self.data = pd.read_csv(os.path.join(root, 'test_data_new.csv'), engine='python')
+            self.data = pd.read_csv(os.path.join(root, 'test_data_%s.csv' % subject), engine='python')
         self.num = len(self.data)
         self.data = np.asarray(self.data, dtype=np.float)
         self.label = self.data[:, -2:]
         self.data = self.data[:, :-2]
         self.transform = transform
         print(self.data.shape)
+        print(self.label.shape)
 
     def __getitem__(self, item):
         data = self.data[item].reshape(32, 32)
@@ -446,23 +447,3 @@ class EEGBCI_RNN(nn.Module):
         out = self.fc2(out)
         out = self.fc3(out)
         return out
-
-
-def preprocess(data, method):
-    num_channel = data.shape[1]
-    len_data = data.shape[2]
-    if method == 'None':
-        return data.reshape(-1, num_channel * len_data)
-
-    for i in range(len(data)):
-        for j in range(num_channel):
-            mean = data[i][j].mean()
-            std = data[i][j].std()
-            data_max = data[i][j].max()
-            data_min = data[i][j].min()
-            for k in range(len_data):
-                if method == 'Normalization':
-                    data[i][j][k] = (data[i][j][k] - mean) / std
-                else:
-                    data[i][j][k] = (data[i][j][k] - data_min) / (data_max - data_min)
-    return data.reshape(-1, num_channel * len_data)

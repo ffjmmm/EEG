@@ -11,27 +11,30 @@ import utils
 
 # 超参数设置
 EPOCH = 100
-BATCH_SIZE = 128
-N_CLASS = 2
+BATCH_SIZE = 64
 LR = 0.0001
 DROPOUT_RATE = 0.1
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 NEURAL_NETWORK_TYPE = 'CNN'
+DATASET = 'EEG'
 SUMMARY = False
 
+subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh', 'all']
+subject = 11
 
 # 保存运行结果到tensorboard
 writer = None
 if SUMMARY:
-    if os.path.exists('runs/EEG_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR):
-        shutil.rmtree('runs/EEG_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
-    writer = SummaryWriter('runs/EEG_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
+    if os.path.exists('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR):
+        shutil.rmtree('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
+    writer = SummaryWriter('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.4f' % LR)
 
 print('Loading data ...')
-# dataset_train = utils.EEGBCI_Dataset(root='./datasets', train=True, transform=None)
-# dataset_test = utils.EEGBCI_Dataset(root='./datasets', train=False, transform=None)
-dataset_train = utils.EEG_Dataset(root='./datasets', train=True, transform=None)
-dataset_test = utils.EEG_Dataset(root='./datasets', train=False, transform=None)
+dataset_train = utils.EEG_Dataset(root='./datasets', train=True, subject=subjects[subject]) if DATASET == 'EEG' else \
+    utils.EEGBCI_Dataset(root='./datasets', train=True, transform=None)
+dataset_test = utils.EEG_Dataset(root='./datasets', train=False, subject=subjects[subject]) if DATASET == 'EEG' else \
+    utils.EEGBCI_Dataset(root='./datasets', train=False, transform=None)
+
 # print(train_dataset.num)
 # print(test_dataset.num)
 dataloader_train = DataLoader(dataset=dataset_train, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
