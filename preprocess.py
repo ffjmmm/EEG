@@ -12,15 +12,16 @@ interval = 5
 start_time = 1
 n_pnts = 1024
 n_channels = 28
-data_standardization = False
-raw_plot = False
+data_standardization = True
+raw_plot = True
 l_freq, h_freq = 5., 30.
 channels = ['C5', 'C3', 'C1', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CP2', 'CP4', 'CP6',
             'P7', 'P5', 'P3', 'P1', 'P2', 'P4', 'P6', 'P8', 'F7', 'F5', 'F3', 'F1', 'F2',
             'F4', 'F6', 'F8']
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh']
 subjects_num = 11
-subject = [i for i in range(subjects_num)]
+# subject = [i for i in range(subjects_num)]
+subject = [1]
 ch_names = ['Fp1', 'Fpz', 'Fp2', 'F7', 'F3',  'Fz',  'F4',  'F8',  'FC5', 'FC1', 'FC2', 'FC6',
             'M1',  'T7',  'C3',  'Cz', 'C4',  'T8',  'M2',  'CP5', 'CP1', 'CP2', 'CP6', 'P7',
             'P3',  'Pz',  'P4',  'P8', 'POz', 'O1',  'O2',  'EOG', 'AF7', 'AF3', 'AF4', 'AF8',
