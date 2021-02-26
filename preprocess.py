@@ -82,7 +82,8 @@ def load_data(subject_index, index, channels):
 
     events, event_id = mne.events_from_annotations(raw)
     reject_criteria = dict(eeg=150e-6)
-    epochs = mne.Epochs(raw, events, tmin=-0.1, tmax=3.9 - 1. / resample_rate, event_id=event_id, reject=reject_criteria, preload=True)
+    epochs = mne.Epochs(raw, events, tmin=-0.1, tmax=3.9 - 1. / resample_rate,
+                        event_id=event_id, reject=reject_criteria, preload=True)
     if epoch_plot:
         epochs.plot()
     # print(epochs)
