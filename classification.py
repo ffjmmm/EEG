@@ -14,16 +14,16 @@ DROPOUT_RATE = 0.1
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 NEURAL_NETWORK_TYPE = 'CNN'
 DATASET = 'EEG'
-SUMMARY = True
+SUMMARY = False
 
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh', 'all']
-subject = 11
+subject = 0
 
 writer = None
 if SUMMARY:
-    if os.path.exists('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.3f' % LR):
-        shutil.rmtree('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.3f' % LR)
-    writer = SummaryWriter('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_LR=%.3f' % LR)
+    if os.path.exists('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_' + subjects[subject] + '_LR=%.3f' % LR):
+        shutil.rmtree('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_' + subjects[subject] + '_LR=%.3f' % LR)
+    writer = SummaryWriter('runs/' + DATASET + '_' + NEURAL_NETWORK_TYPE + '_' + subjects[subject] + '_LR=%.3f' % LR)
 
 print('Loading data ...')
 dataset_train = utils.EEG_Dataset(root='./datasets', train=True, subject=subjects[subject]) if DATASET == 'EEG' else \
@@ -31,8 +31,9 @@ dataset_train = utils.EEG_Dataset(root='./datasets', train=True, subject=subject
 dataset_test = utils.EEG_Dataset(root='./datasets', train=False, subject=subjects[subject]) if DATASET == 'EEG' else \
     utils.EEGBCI_Dataset(root='./datasets', train=False, transform=None)
 
-# print(train_dataset.num)
-# print(test_dataset.num)
+print(dataset_train.num)
+print(dataset_test.num)
+exit()
 dataloader_train = DataLoader(dataset=dataset_train, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
 dataloader_test = DataLoader(dataset=dataset_test, batch_size=BATCH_SIZE, drop_last=True)
 
@@ -40,10 +41,10 @@ print('Constructing Neural Network ...')
 neural_network = None
 if NEURAL_NETWORK_TYPE == 'CNN':
     neural_network = utils.EEG_CNN(DROPOUT_RATE).to(device) if DATASET == 'EEG' else utils.EEGBCI_CNN(DROPOUT_RATE).to(device)
-elif NEURAL_NETWORK_TYPE == 'RNN':
-    neural_network = utils.EEGBCI_RNN(DROPOUT_RATE).to(device)
-else:
-    neural_network = utils.EEGBCI_CNN_RNN(DROPOUT_RATE).to(device)
+# elif NEURAL_NETWORK_TYPE == 'RNN':
+#     neural_network = utils.EEGBCI_RNN(DROPOUT_RATE).to(device)
+# else:
+#     neural_network = utils.EEGBCI_CNN_RNN(DROPOUT_RATE).to(device)
 
 optimizer = torch.optim.Adam(neural_network.parameters(), lr=LR)
 loss_func = torch.nn.MSELoss()
