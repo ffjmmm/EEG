@@ -149,7 +149,7 @@ class EEGBCI_CNN(nn.Module):
 
 
 class EEG_CNN(nn.Module):
-    def __init__(self, dropout_rate):
+    def __init__(self, dropout_rate=0.0):
         super(EEG_CNN, self).__init__()
 
         # input 1 x 32 x 32
