@@ -63,6 +63,46 @@ class EEG_Dataset(torch.utils.data.Dataset):
         return self.num
 
 
+class EEG_Transfer_Dataset(torch.utils.data.Dataset):
+    def __init__(self, root, train, subject, source=True, transform=None):
+        super(EEG_Transfer_Dataset, self).__init__()
+
+        root = os.path.join(root, subject)
+        print(root)
+
+        if train:
+            if source:
+                self.data = pd.read_csv(os.path.join(root, 'train_data_except.csv'), engine='python')
+            else:
+                self.data = pd.read_csv(os.path.join(root, 'train_data_subject.csv'), engine='python')
+        else:
+            if source:
+                self.data = pd.read_csv(os.path.join(root, 'test_data_except.csv'), engine='python')
+            else:
+                self.data = pd.read_csv(os.path.join(root, 'test_data_subject.csv'), engine='python')
+
+        self.num = len(self.data)
+        self.data = np.asarray(self.data, dtype=np.float)
+        self.label = self.data[:, -2:]
+        self.data = self.data[:, :-2]
+        self.transform = transform
+        print(self.data.shape)
+        print(self.label.shape)
+
+    def __getitem__(self, item):
+        data = self.data[item].reshape(32, 32)
+        data = torch.from_numpy(data)
+        label = torch.from_numpy(self.label[item])
+        if self.transform:
+            data = self.transform(data)
+        data = data.type(torch.FloatTensor)
+        label = label.type(torch.FloatTensor)
+        return data, label
+
+    def __len__(self):
+        return self.num
+
+
 class EEGBCI_CNN(nn.Module):
     def __init__(self, dropout_rate):
         super(EEGBCI_CNN, self).__init__()
@@ -149,7 +189,7 @@ class EEGBCI_CNN(nn.Module):
 
 
 class EEG_CNN(nn.Module):
-    def __init__(self, dropout_rate=0.0):
+    def __init__(self, dropout_rate=0.0, transfer=False):
         super(EEG_CNN, self).__init__()
 
         # input 1 x 32 x 32
@@ -198,6 +238,10 @@ class EEG_CNN(nn.Module):
             nn.Dropout(dropout_rate),
             nn.MaxPool2d(2),
         )
+
+        if transfer:
+            for param in self.parameters():
+                param.requires_grad = False
 
         # 128 * 8 * 8
         self.fc1 = nn.Sequential(

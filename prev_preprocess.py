@@ -18,9 +18,10 @@ l_freq, h_freq = 5., 30.
 channels = ['C5', 'C3', 'C1', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CP2', 'CP4', 'CP6',
             'P7', 'P5', 'P3', 'P1', 'P2', 'P4', 'P6', 'P8', 'F7', 'F5', 'F3', 'F1', 'F2',
             'F4', 'F6', 'F8']
+lab_index = 3
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh']
 subjects_num = 11
-subject = [i for i in range(subjects_num)]
+subject_id_select = [i for i in range(subjects_num)]
 # subject = [1]
 ch_names = ['Fp1', 'Fpz', 'Fp2', 'F7', 'F3',  'Fz',  'F4',  'F8',  'FC5', 'FC1', 'FC2', 'FC6',
             'M1',  'T7',  'C3',  'Cz', 'C4',  'T8',  'M2',  'CP5', 'CP1', 'CP2', 'CP6', 'P7',
@@ -33,7 +34,6 @@ ch_types = ['eeg'] * 31 + ['eog'] + ['eeg'] * 32
 
 # open 'name''index'.mat
 def load_file(name, index):
-    index += 1
     folder_path = './datasets/data/%s/' % name
     mat = sio.loadmat(folder_path + '%s%d.mat' % (name, index))
     raw_data = mat['EEG']['data'][0, 0]
@@ -82,9 +82,8 @@ def load_data(subject_index, index, channels):
 
 data_label_all = []
 
-for subject_index in subject:
-    for k in range(3):
-        data_label_all += load_data(subject_index, k, channels)
+for subject_index in subject_id_select:
+    data_label_all += load_data(subject_index, lab_index, channels)
 
 random.seed(27)
 random.shuffle(data_label_all)
@@ -123,8 +122,8 @@ for i in range(n_train, n_data):
 
 print('Start saving data to csv file ...')
 dataframe_train = pd.DataFrame(train_dict)
-filename = '%s.csv' % subjects[subject[0]] if len(subject) == 1 else 'all.csv'
-dataframe_train.to_csv('./datasets/train_data_' + filename, index=False)
+filename = '%s.csv' % subjects[subject_id_select[0]] if len(subject_id_select) == 1 else 'all.csv'
+dataframe_train.to_csv('./datasets/lab_%d/train_data_%s' % (lab_index, filename), index=False)
 
 dataframe_test = pd.DataFrame(test_dict)
-dataframe_test.to_csv('./datasets/test_data_' + filename, index=False)
+dataframe_test.to_csv('./datasets/lab_%d/test_data_%s' % (lab_index, filename), index=False)

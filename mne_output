@@ -15,76 +15,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1095790
-    Range : 0 ... 1095789 =      0.000 ...  1070.106 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1113164
-    Range : 0 ... 1113163 =      0.000 ...  1087.073 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
 Creating RawArray with float64 data, n_channels=64, n_times=1077825
     Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1068488
-    Range : 0 ... 1068487 =      0.000 ...  1043.444 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1081846
-    Range : 0 ... 1081845 =      0.000 ...  1056.489 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -117,76 +49,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1107939
-    Range : 0 ... 1107938 =      0.000 ...  1081.971 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1100079
-    Range : 0 ... 1100078 =      0.000 ...  1074.295 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
 Creating RawArray with float64 data, n_channels=64, n_times=1107548
     Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1078216
-    Range : 0 ... 1078215 =      0.000 ...  1052.944 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1075631
-    Range : 0 ... 1075630 =      0.000 ...  1050.420 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -219,76 +83,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1067135
-    Range : 0 ... 1067134 =      0.000 ...  1042.123 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1084704
-    Range : 0 ... 1084703 =      0.000 ...  1059.280 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
 Creating RawArray with float64 data, n_channels=64, n_times=1082944
     Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1083542
-    Range : 0 ... 1083541 =      0.000 ...  1058.146 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1105174
-    Range : 0 ... 1105173 =      0.000 ...  1079.271 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -321,76 +117,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1089473
-    Range : 0 ... 1089472 =      0.000 ...  1063.938 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1089418
-    Range : 0 ... 1089417 =      0.000 ...  1063.884 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
 Creating RawArray with float64 data, n_channels=64, n_times=1183088
     Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=954141
-    Range : 0 ... 954140 =      0.000 ...   931.777 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1000647
-    Range : 0 ... 1000646 =      0.000 ...   977.193 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -423,76 +151,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1090030
-    Range : 0 ... 1090029 =      0.000 ...  1064.481 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1075310
-    Range : 0 ... 1075309 =      0.000 ...  1050.106 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
 Creating RawArray with float64 data, n_channels=64, n_times=1106132
     Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1084004
-    Range : 0 ... 1084003 =      0.000 ...  1058.597 secs
-Ready.
-Filtering raw data in 1 contiguous segment
-Setting up band-pass filter from 5 - 30 Hz
-
-FIR filter parameters
----------------------
-Designing a one-pass, zero-phase, non-causal bandpass filter:
-- Windowed time-domain design (firwin) method
-- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
-- Lower passband edge: 5.00
-- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
-- Upper passband edge: 30.00 Hz
-- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
-- Filter length: 1691 samples (1.651 sec)
-
-Creating RawArray with float64 data, n_channels=64, n_times=1095328
-    Range : 0 ... 1095327 =      0.000 ...  1069.655 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -525,8 +185,8 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1084005
-    Range : 0 ... 1084004 =      0.000 ...  1058.598 secs
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
@@ -542,8 +202,1844 @@ Designing a one-pass, zero-phase, non-causal bandpass filter:
 - Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
 - Filter length: 1691 samples (1.651 sec)
 
-Creating RawArray with float64 data, n_channels=64, n_times=1078907
-    Range : 0 ... 1078906 =      0.000 ...  1053.619 secs
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1080340
+    Range : 0 ... 1080339 =      0.000 ...  1055.019 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1077825
+    Range : 0 ... 1077824 =      0.000 ...  1052.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1097443
+    Range : 0 ... 1097442 =      0.000 ...  1071.721 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1107548
+    Range : 0 ... 1107547 =      0.000 ...  1081.589 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1100035
+    Range : 0 ... 1100034 =      0.000 ...  1074.252 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1082944
+    Range : 0 ... 1082943 =      0.000 ...  1057.562 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076427
+    Range : 0 ... 1076426 =      0.000 ...  1051.197 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1183088
+    Range : 0 ... 1183087 =      0.000 ...  1155.358 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1087131
+    Range : 0 ... 1087130 =      0.000 ...  1061.650 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1106132
+    Range : 0 ... 1106131 =      0.000 ...  1080.206 secs
+Ready.
+Filtering raw data in 1 contiguous segment
+Setting up band-pass filter from 5 - 30 Hz
+
+FIR filter parameters
+---------------------
+Designing a one-pass, zero-phase, non-causal bandpass filter:
+- Windowed time-domain design (firwin) method
+- Hamming window with 0.0194 passband ripple and 53 dB stopband attenuation
+- Lower passband edge: 5.00
+- Lower transition bandwidth: 2.00 Hz (-6 dB cutoff frequency: 4.00 Hz)
+- Upper passband edge: 30.00 Hz
+- Upper transition bandwidth: 7.50 Hz (-6 dB cutoff frequency: 33.75 Hz)
+- Filter length: 1691 samples (1.651 sec)
+
+Creating RawArray with float64 data, n_channels=64, n_times=1076949
+    Range : 0 ... 1076948 =      0.000 ...  1051.707 secs
 Ready.
 Filtering raw data in 1 contiguous segment
 Setting up band-pass filter from 5 - 30 Hz
