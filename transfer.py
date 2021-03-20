@@ -17,19 +17,27 @@ DATASET = 'EEG'
 SUMMARY = True
 
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh', 'all']
-subject = 10
-lab_index = 1
+subject = 1
+lab_index = 3
+source_index = 2
 
 print('%s lab: %d LR: %.3f subject: %s start...' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
 
 writer = None
 if SUMMARY:
-    if os.path.exists('runs/transfer_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject])):
-        shutil.rmtree('runs/transfer_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
-    writer = SummaryWriter('runs/transfer_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
+    if os.path.exists('runs/transfer_%s_lab%d_from%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, source_index, subjects[subject])):
+        shutil.rmtree('runs/transfer_%s_lab%d_from%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, source_index, subjects[subject]))
+    writer = SummaryWriter('runs/transfer_%s_lab%d_from%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, source_index, subjects[subject]))
+
+    # if os.path.exists('runs/transfer_%s_lab%d_from%d' % (NEURAL_NETWORK_TYPE, lab_index, source_index)):
+    #     shutil.rmtree('runs/transfer_%s_lab%d_from%d' % (NEURAL_NETWORK_TYPE, lab_index, source_index))
+    # writer = SummaryWriter('runs/transfer_%s_lab%d_from%d' % (NEURAL_NETWORK_TYPE, lab_index, source_index))
 
 
 print('Loading data ...')
+
+# dataset_train = utils.EEG_Dataset(root='./datasets/lab_%d' % lab_index, train=True, subject=subjects[subject])
+# dataset_test = utils.EEG_Dataset(root='./datasets/lab_%d' % lab_index, train=False, subject=subjects[subject])
 
 dataset_train = utils.EEG_Transfer_Dataset(root='./datasets/lab_%d' % lab_index, train=True,
                                            subject=subjects[subject], source=False)
@@ -43,7 +51,8 @@ print('Constructing Neural Network ...')
 neural_network = None
 if NEURAL_NETWORK_TYPE == 'CNN':
     neural_network = utils.EEG_CNN(DROPOUT_RATE, transfer=True)
-    neural_network.load_state_dict(torch.load('./models/%s_%s_lab%d.pkl' % (NEURAL_NETWORK_TYPE, subjects[subject], lab_index)))
+    neural_network.load_state_dict(torch.load('./models/%s_%s_lab%d.pkl' % (NEURAL_NETWORK_TYPE, subjects[subject], source_index)))
+    # neural_network.load_state_dict(torch.load('./models/%s_%s_lab%d.pkl' % (NEURAL_NETWORK_TYPE, subjects[subject], source_index)))
     neural_network.to(device)
 
 params = filter(lambda p: p.requires_grad, neural_network.parameters())

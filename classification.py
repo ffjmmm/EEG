@@ -15,23 +15,23 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 NEURAL_NETWORK_TYPE = 'CNN'
 DATASET = 'EEG'
 SUMMARY = True
-SAVE_MODEL = True
+SAVE_MODEL = False
 
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh', 'all']
-subject = 10
-lab_index = 1
+subject = 1
+lab_index = 3
 
 print('%s lab: %d LR: %.3f subject: %s start...' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
 
 writer = None
 if SUMMARY:
-    # if os.path.exists('runs/%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject])):
-    #     shutil.rmtree('runs/%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
-    # writer = SummaryWriter('runs/%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
+    if os.path.exists('runs/%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject])):
+        shutil.rmtree('runs/%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject]))
+    writer = SummaryWriter('runs/%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject]))
 
-    if os.path.exists('runs/source_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject])):
-        shutil.rmtree('runs/source_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
-    writer = SummaryWriter('runs/source_%s_lab%d_LR=%.3f_%s' % (NEURAL_NETWORK_TYPE, lab_index, LR, subjects[subject]))
+    # if os.path.exists('runs/source_%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject])):
+    #     shutil.rmtree('runs/source_%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject]))
+    # writer = SummaryWriter('runs/source_%s_lab%d_%s' % (NEURAL_NETWORK_TYPE, lab_index, subjects[subject]))
 
 
 print('Loading data ...')
@@ -39,10 +39,14 @@ print('Loading data ...')
 #     utils.EEGBCI_Dataset(root='./datasets', train=True, transform=None)
 # dataset_test = utils.EEG_Dataset(root='./datasets/lab_%d' % lab_index, train=False, subject=subjects[subject]) if DATASET == 'EEG' else \
 #     utils.EEGBCI_Dataset(root='./datasets', train=False, transform=None)
+# dataset_train = utils.EEG_Transfer_Dataset(root='./datasets/lab_%d' % lab_index, train=True,
+#                                            subject=subjects[subject], source=True)
+# dataset_test = utils.EEG_Transfer_Dataset(root='./datasets/lab_%d' % lab_index, train=False,
+#                                           subject=subjects[subject], source=True)
 dataset_train = utils.EEG_Transfer_Dataset(root='./datasets/lab_%d' % lab_index, train=True,
-                                           subject=subjects[subject], source=True)
+                                           subject=subjects[subject], source=False)
 dataset_test = utils.EEG_Transfer_Dataset(root='./datasets/lab_%d' % lab_index, train=False,
-                                           subject=subjects[subject], source=True)
+                                          subject=subjects[subject], source=False)
 
 dataloader_train = DataLoader(dataset=dataset_train, batch_size=BATCH_SIZE, shuffle=True, drop_last=True)
 dataloader_test = DataLoader(dataset=dataset_test, batch_size=BATCH_SIZE, drop_last=True)

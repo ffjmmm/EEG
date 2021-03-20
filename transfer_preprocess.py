@@ -18,7 +18,7 @@ l_freq, h_freq = 5., 30.
 channels = ['C5', 'C3', 'C1', 'C2', 'C4', 'C6', 'CP5', 'CP3', 'CP1', 'CP2', 'CP4', 'CP6',
             'P7', 'P5', 'P3', 'P1', 'P2', 'P4', 'P6', 'P8', 'F7', 'F5', 'F3', 'F1', 'F2',
             'F4', 'F6', 'F8']
-lab_index = 1
+lab_index = 3
 subjects = ['ckm', 'clx', 'csb', 'fy', 'lw', 'ly', 'phl', 'szl', 'xwt', 'yfw', 'zjh']
 subjects_num = 11
 # subject = [1]
